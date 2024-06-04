@@ -1,0 +1,20 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type users_data {
+  id: Int!
+  username: String!
+  email: String!
+  password: String!
+}
+
+type Query {
+  getAllUsers: [users_data!]!
+  getUserProfile(username: String!): users_data
+}
+
+type Mutation {
+  signup(username: String!, email: String!, password: String!): users_data!
+  login(username: String!, password: String!): Boolean!
+}
